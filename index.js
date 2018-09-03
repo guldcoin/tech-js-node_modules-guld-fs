@@ -2,16 +2,16 @@ const pify = require('pify')
 const global = require('window-or-global')
 const BrowserFS = require('browserfs')
 const {extraFS, supplimentFS} = require('flexfs')
-const ENV = require('guld-env').getJS()
+const guldEnv = require('guld-env')
 const nodefs = require('fs')
 const rimraf = require('rimraf')
 var bfsconf = pify(BrowserFS.configure)
 var fs
 var pfs
 
-if (ENV.startsWith('node')) {
+if (guldEnv.JS.startsWith('node')) {
   global.FSTYPE = 'node'
-} else if (ENV && ENV.name.startsWith('chrom') && typeof chrome !== 'undefined') {
+} else if (guldEnv.JS && guldEnv.JS.startsWith('chrom') && typeof chrome !== 'undefined') {
   global.FSTYPE = 'ChromeStorage'
 } else {
   global.FSTYPE = 'LocalStorage'
