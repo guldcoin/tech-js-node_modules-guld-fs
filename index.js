@@ -1,7 +1,7 @@
 const pify = require('pify')
 const global = require('window-or-global')
 const BrowserFS = require('browserfs')
-const {extraFS, supplimentFS} = require('flexfs')
+const { extraFS, supplimentFS } = require('flexfs')
 const guldEnv = require('guld-env')
 const nodefs = require('fs')
 const rimraf = require('rimraf')

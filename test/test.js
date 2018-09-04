@@ -1,6 +1,6 @@
 /* global describe:false it:false */
 const assert = require('chai').assert
-const { getFS } = require('./index.js')
+const { getFS } = require('../index.js')
 
 describe('node', function () {
   it('FSTYPE global set', async function () {
