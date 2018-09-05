@@ -26,8 +26,6 @@ fs.cpr('/long/non/existing/path/chain', '/tmp/')
 fs.rimraf('/tmp/')
 ```
 
-##
 ### License
 
 MIT Copyright isysd
-
